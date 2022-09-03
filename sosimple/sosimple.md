@@ -62,7 +62,7 @@ so we have ports 22,80 open. I have enumerated port 80 (HTTP) because there is n
 
 ### Directory Enumeration  
 
-````````
+````````bash
 feroxbuster -u http://$IP:80/ -t 10 -w /root/.config/AutoRecon/wordlists/dirbuster.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -e
 ````````
 
