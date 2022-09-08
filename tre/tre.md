@@ -12,7 +12,7 @@ export IP=192.168.149.84
 
 As always we start with rustscan I like its style and it instantly gives a response after discovering an open port. The drawback is that we cannot scan it for UDP.
 
-````````bash
+````````python
 rustscan -a $IP -- -A -sC -sV -oN nmap.txt
 ````````
 
@@ -228,7 +228,7 @@ tre@tre:/var/www/html/mantisbt$ cd
 tre@tre:~$ ls
 local.txt
 tre@tre:~$ cat local.txt 
-4d832907592eb70cb182f2caaa24d4d2
+{DO IT YOUR SELF}
 tre@tre:~$ 
 
 ````````
@@ -452,7 +452,7 @@ root
 (remote) root@tre:/root# ls 
 proof.txt  root.txt
 (remote) root@tre:/root# cat proof.txt 
-9d170ba7836423bad6d4a17e275b35b6
+{DO IT YOUR SELF}
 (remote) root@tre:/root#
 
 ````````
